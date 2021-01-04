@@ -16,10 +16,10 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -U pip
+            pip install -U pip flake8 pytest
       # Step 3: run linter and tests
       - run:
-          name: run tests
+          name: run linter and tests
           command: |
             . venv/bin/activate
             flake8 --exclude=venv* --statistics
